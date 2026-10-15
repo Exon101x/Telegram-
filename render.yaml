@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: exon-bot-hoster
+    runtime: docker
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: FORCE_SUB_CHANNEL
+        value: "@Exon101x"
+      - key: CHANNEL_URL
+        value: "https://t.me/Exon101x"
+      - key: OWNER_ID
+        sync: false
+      - key: PUBLIC_MODE
+        value: "1"
+      - key: PORT
+        value: "8080"
